@@ -1,0 +1,7 @@
+category,total_price
+Food,5000
+Electronics,20000
+Food,3000
+Clothing,10000
+Electronics,15000
+Food,2500

@@ -1,0 +1,12 @@
+[{   "student_id": 1,  "name": "Alice",
+   "grades": [
+ 	{"subject": "Math", "score": 85},
+ 	{"subject": "Science", "score": 90},
+ 	{"subject": "English", "score": 80}
+   ] },
+ {   "student_id": 2,   "name": "Bob",
+   "grades": [
+ 	{"subject": "Math", "score": 75},
+ 	{"subject": "Science", "score": 80},
+ 	{"subject": "English", "score": 85}
+   ] }]

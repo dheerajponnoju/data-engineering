@@ -1,0 +1,8 @@
+Name,ID,DOB,Gender,Occupation
+John,1,1990-05-25,Male,Engineer
+Alice,2,15-08-1985,Female,Doctor
+Bob,3,2001-11-10,Male,Teacher
+Mary,4,12-07-1978,Female,Engineer
+John,1,1990-05-25,Male,Engineer
+Alice,2,15-08-1985,Female,Doctor
+Bob,3,2001-11-10,Male,Teacher
