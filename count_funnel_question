@@ -1,0 +1,50 @@
+"""def say_hello():
+    print ('Hello, World')
+
+for i in range(5):
+    say_hello() """
+"""## Problem Title: Strict Funnel Drop-off Analysis
+**1. Problem Description**
+Calculate how many users completed a 3-step funnel (Step A -> Step B -> Step C) in strict chronological order.
+**2. Input Format**
+An array of user events `(user_id, step_name, timestamp)`.
+**3. Output Format**
+An integer representing the count of unique users who completed the strict funnel.
+**4. Constraints/Callouts**
+A user can trigger a step multiple times, but they only count if *some* sequence A, B, C occurs in increasing timestamp order.
+**5. Sample Input**
+events = [("u1", "A", 1), ("u1", "B", 2), ("u1", "C", 3), ("u2", "B", 1), ("u2", "A", 2), ("u2", "C", 3)]
+**6. Sample Output**
+1
+**7. Explanation**
+User `u1` completes A, B, C in order. User `u2` triggers B before A, failing the strict chronological requirement.
+
+---
+"""
+
+def count_funnel(events):
+    user_steps = {}
+    for user_id, step, ts in events:
+        if user_id not in user_steps:
+            user_steps[user_id] = {"A": [], "B": [], "C": []}
+        user_steps[user_id][step].append(ts)
+
+    completed = 0
+    for steps in user_steps.values():
+        first_a = min(steps["A"]) if steps["A"] else None
+        if first_a is None:
+            continue
+        first_b = min((t for t in steps["B"] if t > first_a), default=None)
+        if first_b is None:
+            continue
+        if any(t > first_b for t in steps["C"]):
+            completed += 1
+    return completed
+
+events = [
+    ("u1", "A", 1), ("u1", "B", 2), ("u1", "C", 3), ("u2", "B", 1), ("u2", "A", 2), ("u2", "C", 3)
+]
+
+result = count_funnel(events)
+
+print(f"{result}")

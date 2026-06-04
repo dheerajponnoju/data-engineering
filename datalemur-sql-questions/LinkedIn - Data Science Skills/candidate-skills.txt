@@ -1,0 +1,9 @@
+candidate_id,skill
+123,Python
+123,Tableau
+123,PostgreSQL
+234,R
+234,PowerBI
+234,"SQL Server"
+345,Python
+345,Tableau

@@ -1,0 +1,11 @@
+id,name,region,start_dt,end_dt
+1,Alice Johnson,South,2020-05-15,
+2,Bob Smith,North,2021-02-10,2023-11-30
+3,Charlie Davis,East,2022-08-22,
+4,Diana Prince,West,2020-01-05,
+5,Edward Norton,Central,2021-12-14,
+6,Fiona Gallagher,North,2023-03-01,
+7,George Miller,South,2020-11-20,
+8,Hannah Abbott,West,2022-05-18,2024-01-15
+9,Ian Wright,East,2021-07-09,
+10,Jenna Ortega,Central,2020-09-30

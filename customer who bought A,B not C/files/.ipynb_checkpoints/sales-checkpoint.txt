@@ -1,0 +1,4 @@
+sale_id,burger_id,branch_id,quantity
+1,1,1,100
+2,1,2,150
+3,2,1,80

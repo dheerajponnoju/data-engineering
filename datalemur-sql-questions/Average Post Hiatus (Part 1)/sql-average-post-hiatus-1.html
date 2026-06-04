@@ -1,0 +1,151 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    color: #2d3748;
+                    line-height: 1.6;
+                    padding: 24px;
+                    background-color: #ffffff;
+                    max-width: 850px;
+                    margin: 0 auto;
+                }
+                h1, h2, h3, h4 {
+                    color: #1a202c;
+                    font-weight: 700;
+                    margin-top: 24px;
+                    margin-bottom: 12px;
+                }
+                h2 { border-bottom: 2px solid #edf2f7; padding-bottom: 8px; color: #2b6cb0; }
+                p { margin-bottom: 16px; font-size: 16px; }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin: 20px 0;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+                th, td {
+                    border: 1px solid #e2e8f0;
+                    padding: 12px 16px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f7fafc;
+                    font-weight: 600;
+                    color: #4a5568;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                }
+                tr:nth-child(even) { background-color: #f8fafc; }
+                code {
+                    background-color: #edf2f7;
+                    color: #c53030;
+                    padding: 3px 6px;
+                    border-radius: 4px;
+                    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+                    font-size: 14px;
+                }
+                strong { color: #1a202c; }
+            </style>
+        </head>
+        <body>
+            <p>Given a table of Facebook posts, for each user who posted at least twice in 2021, write a query to find the number of days between each user’s first post of the year and last post of the year in the year 2021. Output the user and number of the days between each user's first and last post. </p>
+<p>p.s. If you've read the <a href="https://www.amazon.com/dp/0578973839?ref_=pe_3052080_397514860">Ace the Data Science Interview</a> and liked it, consider writing us a review?</p>
+<h3><code>posts</code> Table:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">user_id</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr>
+<td style="text-align: left;">post_id</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr>
+<td style="text-align: left;">post_content</td>
+<td style="text-align: left;">text</td>
+</tr>
+<tr>
+<td style="text-align: left;">post_date</td>
+<td style="text-align: left;">timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3><code>posts</code> Example Input:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">user_id</th>
+<th style="text-align: left;">post_id</th>
+<th style="text-align: left;">post_content</th>
+<th style="text-align: left;">post_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">151652</td>
+<td style="text-align: left;">599415</td>
+<td style="text-align: left;">Need a hug</td>
+<td style="text-align: left;">07/10/2021 12:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">661093</td>
+<td style="text-align: left;">624356</td>
+<td style="text-align: left;">Bed. Class 8-12. Work 12-3. Gym 3-5 or 6. Then class 6-10. Another day that's gonna fly by. I miss my girlfriend</td>
+<td style="text-align: left;">07/29/2021 13:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">004239</td>
+<td style="text-align: left;">784254</td>
+<td style="text-align: left;">Happy 4th of July!</td>
+<td style="text-align: left;">07/04/2021 11:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">661093</td>
+<td style="text-align: left;">442560</td>
+<td style="text-align: left;">Just going to cry myself to sleep after watching Marley and Me.</td>
+<td style="text-align: left;">07/08/2021 14:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">151652</td>
+<td style="text-align: left;">111766</td>
+<td style="text-align: left;">I'm so done with covid - need travelling ASAP!</td>
+<td style="text-align: left;">07/12/2021 19:00:00</td>
+</tr>
+</tbody>
+</table>
+<h3>Example Output:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">user_id</th>
+<th style="text-align: left;">days_between</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">151652</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">661093</td>
+<td style="text-align: left;">21</td>
+</tr>
+</tbody>
+</table>
+<p>The dataset you are querying against may have different input &amp; output - <strong>this is just an example</strong>!</p>
+        </body>
+        </html>
+        

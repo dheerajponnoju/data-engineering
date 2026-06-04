@@ -1,0 +1,5 @@
+customer_id,preference
+201,Non-vegetarian
+202,Vegetarian
+203,Non-vegetarian
+204,Non-vegetarian

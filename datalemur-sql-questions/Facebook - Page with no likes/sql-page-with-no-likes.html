@@ -1,0 +1,168 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    color: #2d3748;
+                    line-height: 1.6;
+                    padding: 24px;
+                    background-color: #ffffff;
+                    max-width: 850px;
+                    margin: 0 auto;
+                }
+                h1, h2, h3, h4 {
+                    color: #1a202c;
+                    font-weight: 700;
+                    margin-top: 24px;
+                    margin-bottom: 12px;
+                }
+                h2 { border-bottom: 2px solid #edf2f7; padding-bottom: 8px; color: #2b6cb0; }
+                p { margin-bottom: 16px; font-size: 16px; }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin: 20px 0;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+                th, td {
+                    border: 1px solid #e2e8f0;
+                    padding: 12px 16px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f7fafc;
+                    font-weight: 600;
+                    color: #4a5568;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                }
+                tr:nth-child(even) { background-color: #f8fafc; }
+                code {
+                    background-color: #edf2f7;
+                    color: #c53030;
+                    padding: 3px 6px;
+                    border-radius: 4px;
+                    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+                    font-size: 14px;
+                }
+                strong { color: #1a202c; }
+            </style>
+        </head>
+        <body>
+            <p>Assume you're given two tables containing data about Facebook Pages and their respective likes (as in "Like a Facebook Page"). </p>
+<p>Write a query to return the IDs of the Facebook pages that have zero likes. The output should be sorted in ascending order based on the page IDs.</p>
+<h3><code>pages</code> Table:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Column Name</strong></th>
+<th style="text-align: left;"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">page_id</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr>
+<td style="text-align: left;">page_name</td>
+<td style="text-align: left;">varchar</td>
+</tr>
+</tbody>
+</table>
+<h3><code>pages</code> Example Input:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>page_id</strong></th>
+<th style="text-align: left;"><strong>page_name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">20001</td>
+<td style="text-align: left;">SQL Solutions</td>
+</tr>
+<tr>
+<td style="text-align: left;">20045</td>
+<td style="text-align: left;">Brain Exercises</td>
+</tr>
+<tr>
+<td style="text-align: left;">20701</td>
+<td style="text-align: left;">Tips for Data Analysts</td>
+</tr>
+</tbody>
+</table>
+<h3><code>page_likes</code> Table:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Column Name</strong></th>
+<th style="text-align: left;"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">user_id</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr>
+<td style="text-align: left;">page_id</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr>
+<td style="text-align: left;">liked_date</td>
+<td style="text-align: left;">datetime</td>
+</tr>
+</tbody>
+</table>
+<h3><code>page_likes</code> Example Input:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>user_id</strong></th>
+<th style="text-align: left;"><strong>page_id</strong></th>
+<th style="text-align: left;"><strong>liked_date</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">111</td>
+<td style="text-align: left;">20001</td>
+<td style="text-align: left;">04/08/2022 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">121</td>
+<td style="text-align: left;">20045</td>
+<td style="text-align: left;">03/12/2022 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">156</td>
+<td style="text-align: left;">20001</td>
+<td style="text-align: left;">07/25/2022 00:00:00</td>
+</tr>
+</tbody>
+</table>
+<h3>Example Output:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>page_id</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">20701</td>
+</tr>
+</tbody>
+</table>
+<p>The dataset you are querying against may have different input &amp; output - <strong>this is just an example</strong>!</p>
+<p>p.s. If you have literally no idea how to solve this, maybe give our <a href="https://datalemur.com/sql-tutorial">free SQL tutorial</a> a try first?</p>
+        </body>
+        </html>
+        

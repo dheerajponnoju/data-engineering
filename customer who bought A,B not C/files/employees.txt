@@ -1,0 +1,8 @@
+employee_id,name,salary,department_id,manager_id
+1,Emma Thompson,3800,1,NULL
+2,Daniel Rodriguez,2230,1,10
+3,Olivia Smith,8000,1,8
+4,Noah Johnson,6800,2,8
+5,Sophia Martinez,1750,1,10
+8,William Davis,7000,2,NULL
+10,James Anderson,4000,1,NULL

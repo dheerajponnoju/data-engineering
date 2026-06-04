@@ -1,0 +1,4 @@
+item_id,item_name
+1,Big Mac
+2,Quarter Pounder
+3,Chicken McNuggets

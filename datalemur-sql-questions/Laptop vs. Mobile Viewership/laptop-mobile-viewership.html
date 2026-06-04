@@ -1,0 +1,141 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    color: #2d3748;
+                    line-height: 1.6;
+                    padding: 24px;
+                    background-color: #ffffff;
+                    max-width: 850px;
+                    margin: 0 auto;
+                }
+                h1, h2, h3, h4 {
+                    color: #1a202c;
+                    font-weight: 700;
+                    margin-top: 24px;
+                    margin-bottom: 12px;
+                }
+                h2 { border-bottom: 2px solid #edf2f7; padding-bottom: 8px; color: #2b6cb0; }
+                p { margin-bottom: 16px; font-size: 16px; }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin: 20px 0;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+                th, td {
+                    border: 1px solid #e2e8f0;
+                    padding: 12px 16px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f7fafc;
+                    font-weight: 600;
+                    color: #4a5568;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                }
+                tr:nth-child(even) { background-color: #f8fafc; }
+                code {
+                    background-color: #edf2f7;
+                    color: #c53030;
+                    padding: 3px 6px;
+                    border-radius: 4px;
+                    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+                    font-size: 14px;
+                }
+                strong { color: #1a202c; }
+            </style>
+        </head>
+        <body>
+            <p>This is the same question as problem #3 in the SQL Chapter of <a href="https://amzn.to/3kF79Fx">Ace the Data Science Interview</a>!</p>
+<p>Assume you're given the table on user viewership categorised by device type where the three types are laptop, tablet, and phone. </p>
+<p>Write a query that calculates the total viewership for laptops and mobile devices where mobile is defined as the sum of tablet and phone viewership. Output the total viewership for laptops as <code>laptop_reviews</code> and the total viewership for mobile devices as <code>mobile_views</code>.</p>
+<p><em>Effective 15 April 2023, the solution has been updated with a more concise and easy-to-understand approach.</em></p>
+<h3><code>viewership</code> Table</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">user_id</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr>
+<td style="text-align: left;">device_type</td>
+<td style="text-align: left;">string ('laptop', 'tablet', 'phone')</td>
+</tr>
+<tr>
+<td style="text-align: left;">view_time</td>
+<td style="text-align: left;">timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3><code>viewership</code> Example Input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">user_id</th>
+<th style="text-align: left;">device_type</th>
+<th style="text-align: left;">view_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">tablet</td>
+<td style="text-align: left;">01/02/2022 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">125</td>
+<td style="text-align: left;">laptop</td>
+<td style="text-align: left;">01/07/2022 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">128</td>
+<td style="text-align: left;">laptop</td>
+<td style="text-align: left;">02/09/2022 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">phone</td>
+<td style="text-align: left;">02/09/2022 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">145</td>
+<td style="text-align: left;">tablet</td>
+<td style="text-align: left;">02/24/2022 00:00:00</td>
+</tr>
+</tbody>
+</table>
+<h3>Example Output</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">laptop_views</th>
+<th style="text-align: left;">mobile_views</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h3>Explanation</h3>
+<p>Based on the example input, there are a total of 2 laptop views and 3 mobile views.</p>
+<p>The dataset you are querying against may have different input &amp; output - <strong>this is just an example</strong>!</p>
+        </body>
+        </html>
+        

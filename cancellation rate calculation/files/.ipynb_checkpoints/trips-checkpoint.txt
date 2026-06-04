@@ -1,0 +1,17 @@
+id,client_id,driver_id,city_id,status,request_at
+101,1,10,1,completed,2026-05-10
+102,2,11,1,cancelled_by_driver,2026-05-10
+103,3,12,6,completed,2026-05-10
+104,4,13,1,completed,2026-05-10
+105,1,10,6,cancelled_by_client,2026-05-11
+106,2,11,1,completed,2026-05-11
+107,3,12,12,completed,2026-05-11
+108,4,10,12,cancelled_by_client,2026-05-11
+109,1,12,1,completed,2026-05-12
+110,3,11,6,completed,2026-05-12
+111,2,13,1,cancelled_by_driver,2026-05-12
+112,4,12,6,completed,2026-05-12
+113,1,11,12,completed,2026-05-13
+114,3,10,6,completed,2026-05-13
+115,2,12,1,cancelled_by_client,2026-05-13
+116,4,13,12,completed,2026-05-13

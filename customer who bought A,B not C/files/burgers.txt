@@ -1,0 +1,4 @@
+burger_id,burger_type,price
+1,Big Mac,3.99
+2,Quarter Pounder,3.79
+3,Cheeseburger,1.69
